@@ -1,5 +1,5 @@
-import React, {AppProps} from "next/app";
-import {FC} from "react";
+import React, {FC} from "react";
+import {AppProps} from "next/app";
 import {wrapper} from "../store";
 
 const WrappedApp: FC<AppProps> = ({Component, pageProps}) => (
