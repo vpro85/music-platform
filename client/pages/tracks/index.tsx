@@ -4,6 +4,7 @@ import {Box, Button, Card, Grid} from "@material-ui/core";
 import {useRouter} from "next/router";
 import {ITrack} from "../../types/tracks";
 import TrackList from "../../components/TrackList";
+import {useActions} from "../../hooks/useActions";
 
 const Index = () => {
     const router = useRouter()
