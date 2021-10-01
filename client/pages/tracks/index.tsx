@@ -9,9 +9,9 @@ import {useActions} from "../../hooks/useActions";
 const Index = () => {
     const router = useRouter()
     const tracks: ITrack[] = [
-        {_id: '1', artist: 'IF', text: 'Something to sing...', name:'Track 1', comments:[], listens:0, audio:'http://192.168.1.13:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
-        {_id: '2', artist: 'IF', text: 'Something to sing...', name:'Track 2', comments:[], listens:5, audio:'http://192.168.1.13:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
-        {_id: '3', artist: 'IF', text: 'Something to sing...', name:'Track 3', comments:[], listens:7, audio:'http://192.168.1.13:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
+        {_id: '1', artist: 'IF', text: 'Something to sing...', name:'Track 1', comments:[], listens:0, audio:'http://192.168.0.92:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
+        {_id: '2', artist: 'IF', text: 'Something to sing...', name:'Track 2', comments:[], listens:5, audio:'http://192.168.0.92:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
+        {_id: '3', artist: 'IF', text: 'Something to sing...', name:'Track 3', comments:[], listens:7, audio:'http://192.168.0.92:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3', picture:'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg'},
     ]
     return (
         <MainLayout>
