@@ -25,7 +25,7 @@ const TrackItem: React.FC<TrackItemProps> = ({track, active = false}) => {
             <IconButton onClick={play}>
                 {active ? <Pause/> : <PlayArrow/>}
             </IconButton>
-            <img width={70} height={70} src={'http://192.168.0.92:5000/' + track.picture} alt={track.name}/>
+            <img width={70} height={70} src={'http://192.168.1.66:5000/' + track.picture} alt={track.name}/>
             <Grid container direction={"column"} style={{width: 200, margin: '0 20px'}}>
                 <div>{track.name}</div>
                 <div style={{fontSize: 12, color: "gray"}}>{track.artist}</div>

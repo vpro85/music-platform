@@ -11,14 +11,11 @@ const TrackPage = () => {
         artist: 'IF',
         text: 'Something to sing...',
         name: 'Track 1',
-        // comments: [],
+        comments: [],
         listens: 0,
-        audio: 'http://192.168.1.13:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3',
-        picture: 'http://192.168.1.13:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg',
-        comments:[
-            {_id: '1', username: "Vadim", text: "Very good!"},
-            {_id: '2', username: "Vad", text: "Not bad.."}
-        ]
+        audio: 'http://192.168.1.66:5000/audio/5a84022e-d330-4447-815a-ac2710b71fc9.mp3',
+        picture: 'http://192.168.1.66:5000/image/e3be65d1-31a6-4586-980b-966bcc019336.jpg',
+
     }
     return (
         <MainLayout>
