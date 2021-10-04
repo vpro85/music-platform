@@ -5,10 +5,27 @@ import {Button, Grid, TextField} from "@material-ui/core";
 import {useRouter} from "next/router";
 import {GetServerSideProps} from "next";
 import axios from "axios";
+import {useInput} from "../../hooks/useInput";
 
 const TrackPage = ({serverTrack}) => {
-    const [track, setTrack] = useState(serverTrack)
+    const [track, setTrack] = useState<ITrack>(serverTrack)
     const router = useRouter()
+
+    const username = useInput('')
+    const text = useInput('')
+    const addComment = async () => {
+        try {
+            const response = await axios.post('http://192.168.1.66:5000/tracks/comment', {
+                username: username.value,
+                text: text.value,
+                trackId: track._id
+            })
+            setTrack({...track, comments: [...track.comments, response.data]})
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
 
     return (
         <MainLayout>
@@ -30,9 +47,9 @@ const TrackPage = ({serverTrack}) => {
             <p>{track.text}</p>
             <h1>Comments: </h1>
             <Grid container>
-                <TextField label={"Your name..."} fullWidth/>
-                <TextField label={"Your comment..."} fullWidth multiline rows={4}/>
-                <Button variant={"outlined"}>Post</Button>
+                <TextField label={"Your name..."} fullWidth {...username}/>
+                <TextField label={"Your comment..."} fullWidth multiline rows={4} {...text}/>
+                <Button variant={"outlined"} onClick={addComment}>Post</Button>
             </Grid>
             <div>{track.comments.map(comment =>
                 <div>
