@@ -28,7 +28,7 @@ const TrackPage = ({serverTrack}) => {
     }
 
     return (
-        <MainLayout>
+        <MainLayout title={`${track.name} by ${track.artist} @ Music Platform` } keywords={`${track.name}, ${track.artist}, music, artist`}>
             <Button
                 variant={"outlined"}
                 style={{fontSize: 32}}
@@ -52,7 +52,7 @@ const TrackPage = ({serverTrack}) => {
                 <Button variant={"outlined"} onClick={addComment}>Post</Button>
             </Grid>
             <div>{track.comments.map(comment =>
-                <div>
+                <div key={comment._id}>
                     <hr/>
                     <div>Name: {comment.username}</div>
                     <div>Comment: {comment.text}</div>
